@@ -46,8 +46,7 @@ def send_email(name):
     )
 
     if response.status_code != 200:
-        #error_message = f"Falha ao enviar o e-mail. Status code: {response.status_code}, Resposta: {response.text}"
-        error_message = os.getenv('MAILGUN_API_KEY')
+        error_message = f"Falha ao enviar o e-mail. Status code: {response.status_code}, Resposta: {response.text}"
         print(error_message)
         raise Exception(error_message)
 
